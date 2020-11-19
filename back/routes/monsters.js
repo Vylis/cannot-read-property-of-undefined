@@ -90,12 +90,12 @@ router.put('/:id', (req, res) => {
 router.delete('/:id', (req, res) => {
 	const idMonster = req.params.id;
 
-	connection.query('DELETE FROM monsters WHERE id = ?', idMonster, (err) => {
+	connection.query('DELETE FROM monsters WHERE id = ?', req.params.id, (err) => {
 		if (err) {
 			console.log(err);
 			res.status(500).send('Error while trying to delete a creature');
 		} else {
-			res.send(200);
+			res.status(200).send('Success');
 		}
 	});
 });
