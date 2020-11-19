@@ -1,7 +1,8 @@
-.most_wanted_container{
+.most_wanted_container, .last_reward_container{
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap
 }
 
 .monster_info{

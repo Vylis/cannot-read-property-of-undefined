@@ -6,7 +6,7 @@
   position: relative;
   margin: auto;
   width: 1000px;
-  height: 1006px;
+  height: 1000px;
 }
 
 .map{
@@ -14,6 +14,8 @@
   top: 0;
   left:0;
   z-index: 1;
+  width: 1000px;
+  height: 1000px;
 }
 
 .map_fraction{
@@ -23,13 +25,13 @@
   align-items: baseline;
   flex-wrap: wrap;
   width: 1000px;
-  height: 1006px;
+  height: 1000px;
   z-index: 2;
 }
 
 .fraction{
-  width: 200px;
-  height: 201.2px;
+  width: 66.65px;
+  height: 66.65px;
   box-shadow: inset 0 0 1px 1px grey;
 }
 

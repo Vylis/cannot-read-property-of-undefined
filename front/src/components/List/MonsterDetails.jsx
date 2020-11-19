@@ -26,7 +26,7 @@ const MonsterDetails = ({ match, location }) => {
 						alt={monster.name}
 					/>
 					<h2>{monster.name}</h2>
-					{/* <p>Can be found at {monster.location}</p> */}
+					<p>Can be found at {monster.location}</p>
 					<p>Danger rating : {monster.danger}/10</p>
 					<p>{monster.description}</p>
 					<p>Weakness : {monster.weakness}</p>
