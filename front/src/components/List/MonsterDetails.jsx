@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
-import NavBar from '../../NavBar/NavBar';
-import Footer from '../../Footer/Footer';
+import NavBar from '../NavBar/NavBar';
+import Footer from '../Footer/Footer';
 import "../../styles/css/List/MonsterDetails.css";
 
 const MonsterDetails = ({ match, location }) => {
