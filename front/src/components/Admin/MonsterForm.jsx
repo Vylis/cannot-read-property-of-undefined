@@ -101,13 +101,6 @@ const MonsterForm = () => {
 
 			<input
 				className='inputMonsterForm'
-				name='loot'
-				onChange={(e) => handleChange(e)}
-				placeholder='Loot'
-			/>
-
-			<input
-				className='inputMonsterForm'
 				name='image'
 				onChange={(e) => handleChange(e)}
 				placeholder='Image'
