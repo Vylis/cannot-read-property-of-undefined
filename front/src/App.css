@@ -1,3 +1,9 @@
 .App {
+  margin: 0;
+  padding: 0;
   text-align: center;
+  min-height: 100vh;
+  background-image: url('./styles/pictures/back.jpg');
+  background-size: cover;
 }
+
