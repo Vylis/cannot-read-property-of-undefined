@@ -1,0 +1,46 @@
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import { Link } from "react-router-dom";
+
+import NavBar from '../NavBar/NavBar';
+import Footer from '../Footer/Footer';
+import "../../styles/css/MonsterList/MonsterDetails.css";
+
+const MonsterDetails = ({ match, location }) => {
+  const { id } = match.params;
+  const [monster, setMonster] = useState({});
+
+  useEffect(() => {
+    axios
+      .get(`${id}`)
+      .then((response) => response.data)
+      .then((data) => setMonster(data));
+  }, [id]);
+
+  return (
+    <div>
+      <NavBar />
+      <div className="monster_details_container">
+        <Link to={"/MonsterList"}>
+          <button className="monster_details_button">Return to List</button>
+        </Link>
+        <div className="monster_details intel">
+          <image
+            className="monster_details_image"
+            src={monster.image}
+            alt={monster.name}
+          />
+          <h2>{monster.name}</h2>
+          <p>
+            {monster.location}
+            {monster.description}
+            {monster.danger}
+          </p>
+        </div>
+      </div>
+      <Footer />
+    </div>
+  );
+};
+
+export default MonsterDetails;
