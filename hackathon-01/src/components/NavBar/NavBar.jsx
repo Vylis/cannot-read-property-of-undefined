@@ -1,18 +1,24 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+import React from "react";
+import { NavLink } from "react-router-dom";
+
+import "../../styles/css/NavBar/NavBar.css";
 
 const NavBar = () => {
-  return(
-    <header className='header'>
-      <h1>MYTHOLODEX</h1>
-      <nav className='nav_container'>
-        <button type="button" className='nav_btn'>MAP</button>
-        <button type="button" className='nav_btn'>LIST</button>
-        {/* <NavLink></NavLink>
+  return (
+    <nav className="nav_container">
+      <NavLink exact to="/" className="nav_btn" activeClassName="selected">
+        HOME
+      </NavLink>
+      <NavLink to="/map" className="nav_btn" activeClassName="selected">
+        MAP
+      </NavLink>
+      <div className="nav_btn">
+        LIST
+      </div>
+      {/* <NavLink></NavLink>
         <NavLink></NavLink> */}
-      </nav>
-    </header>
-  )
-}
+    </nav>
+  );
+};
 
 export default NavBar;
