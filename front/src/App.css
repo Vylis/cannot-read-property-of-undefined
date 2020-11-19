@@ -1,3 +1,5 @@
 .App {
   text-align: center;
+  --light-text: white;
+  --dark-background: hsl(21, 45%, 10%);
 }

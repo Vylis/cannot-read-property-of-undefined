@@ -3,5 +3,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  bottom: 0;
+  margin-top: 20px;
+  bottom: 0px;
+  color: var(--light-text);
+  background: linear-gradient(#ffffff96, var(--dark-background));
 }
