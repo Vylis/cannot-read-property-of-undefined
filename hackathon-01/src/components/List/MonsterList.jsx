@@ -32,3 +32,5 @@ function MonsterList() {
 }
 
 export default MonsterList;
+
+//${process.env.REACT_APP_MYTH_API_URL}

@@ -10,10 +10,10 @@ function MonsterCard(props) {
     <div className="monster_card_container">
       <img className="monster_card_image" src={image} alt={name} />
       <div className="monster_card_intel">
-        <p>{name}</p>
-        <p>{danger}</p>  
-        <p>{location}</p>  
-        <Link to={`/MonsterList/${id}`}>See more</Link>
+        <p><strong>{name}</strong></p>
+        <p>Danger rate : {danger}/10</p>  
+        <p>Can be found at {location}</p>  
+        <Link to={`/MonsterList/${id}`}><button className="monster_card_button">Learn more</button></Link>
       </div>
     </div>
   );

@@ -1,7 +1,8 @@
 .monster_card_container{
     display: flex;
     border: 1px solid black;
-    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-right: 2rem;
 }
 
 .monster_card_image{
@@ -12,6 +13,7 @@
 .monster_card_intel{
     display: flex;
     flex-direction: column;
+    padding: 0px 10px;
 }
 
 a:link {

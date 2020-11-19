@@ -12,9 +12,8 @@ const MonsterDetails = ({ match, location }) => {
 
   useEffect(() => {
     axios
-      .get(`${id}`)
-      .then((response) => response.data)
-      .then((data) => setMonster(data));
+      .get(`https://cannotread.herokuapp.com/api/monsters/${id}`)
+      .then((response) => setMonster(response.data[0]));
   }, [id]);
 
   return (
@@ -25,17 +24,16 @@ const MonsterDetails = ({ match, location }) => {
           <button className="monster_details_button">Return to List</button>
         </Link>
         <div className="monster_details intel">
-          <image
+          <img
             className="monster_details_image"
             src={monster.image}
             alt={monster.name}
           />
           <h2>{monster.name}</h2>
-          <p>
-            {monster.location}
-            {monster.description}
-            {monster.danger}
-          </p>
+          <p>Can be found at {monster.location}</p>
+          <p>Danger rating : {monster.danger}/10</p>
+          <p>{monster.description}</p> 
+          <p>Weakness : {monster.weakness}</p> 
         </div>
       </div>
       <Footer />
