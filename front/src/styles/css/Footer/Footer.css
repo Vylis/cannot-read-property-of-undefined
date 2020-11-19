@@ -7,4 +7,5 @@
   bottom: 0px;
   color: var(--white);
   background: linear-gradient(#ffffff96, var(--dark-background));
+  margin-top: 4rem;
 }

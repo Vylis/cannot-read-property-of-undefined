@@ -11,20 +11,25 @@ for (let i = 0; i < nbFraction; i++) {
 }
 
 const Map = () => {
+  const [focus, setFocus] = useState(false);
+
+  const handleFocus = (i) => {
+    console.log(i+1)
+  };
+
   return (
     <section className=" map_page_container">
       <h3>Click on the map to see which monsters are in that location :</h3>
-      <div className="map_container">
+      <div className='map_container'>
         <img src={map} alt="Ancient Greece" className="map" />
         <div className="map_fraction">
-          {fractionArray.map((element, index) => (
-            <Link to="/list" id={index}>
-              <div
-                to="#map_monsters_list"
-                className={`fraction ${index+1}`}
-                id={index + 1}
-              />
-            </Link>
+          {fractionArray.map((element, i) => (
+            <button type="button"
+              // to="/list"
+              id={i + 1}
+              className='fraction'
+              onClick={() => handleFocus(i)}
+            />
           ))}
         </div>
       </div>

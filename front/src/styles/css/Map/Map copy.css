@@ -1,0 +1,63 @@
+.map_page_container{
+  /* height: 100%; */
+}
+
+/* .map_container{
+  position: relative;
+  margin: auto;
+  min-width: 320px;
+  min-height: 320px;
+  height: 100%;
+  /* height: 1322.83px; */
+  /* width : 80%; */
+
+
+/* .map{
+  position: relative;
+  z-index: 1;
+  min-width: 320px;
+  min-height: 320px;
+  width : 80%;
+
+} */
+
+/* .map_fraction{
+  position: absolute;
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+  flex-wrap: wrap;
+  min-width: 320px;
+  min-height: 320px;
+  width : 100%;
+
+  z-index: 2;
+} */
+
+.map_fraction {
+  /* position: absolute; */
+  display: grid;
+  grid-template-columns: repeat(15, 1fr);
+  grid-template-rows: repeat(15, 1fr);
+  min-width: 64px;
+  min-height: 64px;
+  
+  background: url('../../pictures/little_greece_map.png') no-repeat center;
+  background-size: cover;
+}
+
+.fraction{
+  /* display: grid; */
+  /* height: 100%; */
+  
+  /* width: 0.066%;
+  height: 0.066%; */
+  /* width: 66.65px;
+  height: 66.65px; */
+  box-shadow: inset 0 0 1px 1px grey;
+}
+
+.fraction:focus{
+  box-shadow: inset 0 0 1px 2px red;
+}
+
