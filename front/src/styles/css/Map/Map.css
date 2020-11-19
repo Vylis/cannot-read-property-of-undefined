@@ -1,0 +1,38 @@
+.map_page_container{
+
+}
+
+.map_container{
+  position: relative;
+  margin: auto;
+  width: 1000px;
+  height: 1006px;
+}
+
+.map{
+  position: absolute;
+  top: 0;
+  left:0;
+  z-index: 1;
+}
+
+.map_fraction{
+  position: absolute;
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+  flex-wrap: wrap;
+  width: 1000px;
+  height: 1006px;
+  z-index: 2;
+}
+
+.fraction{
+  width: 200px;
+  height: 201.2px;
+  box-shadow: inset 0 0 1px 1px blue;
+}
+
+.isFocus{
+  background-color: red;
+}
