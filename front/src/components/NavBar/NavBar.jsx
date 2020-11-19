@@ -12,11 +12,9 @@ const NavBar = () => {
       <NavLink to="/map" className="nav_btn" activeClassName="selected">
         MAP
       </NavLink>
-      <div className="nav_btn">
+      <NavLink to="/MonsterList" className="nav_btn" activeClassName="selected">
         LIST
-      </div>
-      {/* <NavLink></NavLink>
-        <NavLink></NavLink> */}
+      </NavLink>
     </nav>
   );
 };
