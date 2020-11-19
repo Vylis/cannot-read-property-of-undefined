@@ -4,6 +4,17 @@
   text-align: center;
   min-height: 100vh;
   background-image: url('./styles/pictures/back.jpg');
-  background-size: cover;
+  animation: backgroundMove 150s ease infinite;
 }
 
+@keyframes backgroundMove{
+  0%{
+    background-position: 0 0;
+  }
+  50%{
+    background-position: 100% 100%;
+  }
+  100%{
+    background-position: 0 0;
+  }
+}
