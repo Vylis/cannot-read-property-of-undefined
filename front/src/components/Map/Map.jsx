@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-import map from "../../styles/pictures/map.png";
+import map from "../../styles/pictures/greece_map.png";
 import "../../styles/css/Map/Map.css";
 
-const nbFraction = 25;
+const nbFraction = 225;
 const fractionArray = [];
 for (let i = 0; i < nbFraction; i++) {
   fractionArray.push("");
@@ -21,7 +21,7 @@ const Map = () => {
             <Link to="/list" id={index}>
               <div
                 to="#map_monsters_list"
-                className="fraction"
+                className={`fraction ${index+1}`}
                 id={index + 1}
               />
             </Link>

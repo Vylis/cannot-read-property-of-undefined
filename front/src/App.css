@@ -7,6 +7,7 @@
 	--dark-tone: hsl(320, 100%, 29%);
 	min-height: 100vh;
 	background-image: url('./styles/pictures/back.jpg');
+	background-size: cover;
 	animation: backgroundMove 150s ease infinite;
 }
 

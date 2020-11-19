@@ -1,6 +1,7 @@
 .monster_details_image{
     max-width: 500px;
     margin: 1rem 0;
+    box-shadow: 5px 5px 10px 5px black;
 }
 
 .monster_details_button{
