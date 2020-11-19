@@ -1,9 +1,17 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import '../../styles/css/Admin/Admin.css';
 import axios from 'axios';
 
 const MonsterForm = () => {
 	const [input, setInput] = useState({});
+	const [loots, setLoots] = useState([]);
+
+	useEffect(() => {
+		axios
+			.get(`${process.env.REACT_APP_MYTH_API_URL}/api/loots`)
+			.then((res) => res.data)
+			.then((data) => setLoots(data));
+	}, []);
 
 	const handleChange = (e) => {
 		setInput({ ...input, [e.target.name]: e.target.value });
@@ -11,7 +19,7 @@ const MonsterForm = () => {
 
 	const handleClick = async () => {
 		await axios
-			.post('https://cannotread.herokuapp.com/api/monsters', {
+			.post(`${process.env.REACT_APP_MYTH_API_URL}/api/monsters`, {
 				...input,
 			})
 			.then((reponse) => console.log(reponse))
@@ -129,6 +137,18 @@ const MonsterForm = () => {
 				onChange={(e) => handleChange(e)}
 				placeholder='Reward for killing him'
 			/>
+
+			<select
+				className='selectInputMonsterForm'
+				name='id_loot'
+				onChange={(e) => handleChange(e)}>
+				<option value=''>--Choose your monster's loot--</option>
+				{loots.map((loots) => (
+					<option value={loots.id}>
+						Name:{loots.name}, Id:{loots.id}
+					</option>
+				))}
+			</select>
 
 			<div className='centerButtonMonsterForm'>
 				<button
