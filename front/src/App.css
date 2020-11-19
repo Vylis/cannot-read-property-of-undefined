@@ -2,6 +2,11 @@
   margin: 0;
   padding: 0;
   text-align: center;
+<<<<<<< HEAD
+  --white: white;
+  --dark-background: hsl(239, 100%, 18%);
+  --dark-tone: hsl(320, 100%, 29%);
+=======
   min-height: 100vh;
   background-image: url('./styles/pictures/back.jpg');
   animation: backgroundMove 150s ease infinite;
@@ -17,4 +22,5 @@
   100%{
     background-position: 0 0;
   }
+>>>>>>> 743f26346bb1a03dfcf602b7a30966b9bb15421f
 }

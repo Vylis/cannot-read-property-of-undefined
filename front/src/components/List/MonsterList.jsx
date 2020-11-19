@@ -1,6 +1,11 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
+<<<<<<< HEAD
+import NavBar from '../../components/NavBar/NavBar';
+import Footer from '../Footer/Footer';
+=======
+>>>>>>> 743f26346bb1a03dfcf602b7a30966b9bb15421f
 import MonsterCard from "./MonsterCard";
 import "../../styles/css/List/MonsterList.css";
 

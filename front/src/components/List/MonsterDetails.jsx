@@ -2,6 +2,11 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
+<<<<<<< HEAD
+import NavBar from '../NavBar/NavBar';
+import Footer from '../Footer/Footer';
+=======
+>>>>>>> 743f26346bb1a03dfcf602b7a30966b9bb15421f
 import "../../styles/css/List/MonsterDetails.css";
 
 const MonsterDetails = ({ match, location }) => {
