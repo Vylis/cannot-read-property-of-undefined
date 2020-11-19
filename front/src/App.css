@@ -6,8 +6,9 @@
 	--dark-background: hsl(239, 100%, 18%);
 	--dark-tone: hsl(320, 100%, 29%);
 	min-height: 100vh;
-	background-image: url('./styles/pictures/back.jpg');
-	animation: backgroundMove 150s ease infinite;
+	/* background-image: url('./styles/pictures/back.jpg');
+	background-size: cover;
+	animation: backgroundMove 150s ease infinite; */
 }
 
 @keyframes backgroundMove {
