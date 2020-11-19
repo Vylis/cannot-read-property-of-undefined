@@ -1,0 +1,19 @@
+.most_wanted_container{
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.monster_info{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.wanted_monster{
+  margin: 1rem;
+}
+
+.monster_portrait{
+  height: 10rem;
+}
