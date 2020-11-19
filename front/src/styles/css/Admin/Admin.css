@@ -1,0 +1,34 @@
+.admin {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	align-items: center;
+	margin-top: 50px;
+}
+
+.monsterForm {
+	display: flex;
+	flex-direction: column;
+	margin: 25px;
+	width: 250px;
+}
+
+.inputMonsterForm {
+	padding: 10px;
+	margin-bottom: 2px;
+}
+
+.selectInputMonsterForm {
+	padding: 10px;
+	margin-bottom: 2px;
+}
+
+.centerButtonMonsterForm {
+	display: flex;
+	justify-content: center;
+}
+
+.buttonMonsterForm {
+	padding: 10px;
+	width: 120px;
+}
