@@ -22,7 +22,9 @@
 
 .confirm_btn {
   border: none;
-  background-color: violet;
+  background-color: red;
+  border-radius: 20px;
+  color: #ffff;
 }
 
 .map_container {

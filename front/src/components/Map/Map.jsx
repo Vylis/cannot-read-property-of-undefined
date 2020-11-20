@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 
 import Signal from "./Signal";
 import MonsterCard from "../List/MonsterCard";
+import bell from "../../styles/pictures/bell.png";
 
 import map from "../../styles/pictures/greece_map.png";
 import "../../styles/css/Map/Map.css";
@@ -63,10 +64,7 @@ const Map = () => {
       <div className="map_container">
         <div className="alert_container">
           <button className="alert_btn" onClick={() => setToggle(!toggle)}>
-            <img
-              className="alert_btn_pic"
-              src="https://www.iconsdb.com/icons/preview/red/bell-xxl.png"
-            />
+            <img className="alert_btn_pic" src={bell} />
           </button>
 
           {toggle && (
