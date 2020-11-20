@@ -66,53 +66,53 @@ const Map = () => {
 						<img className='alert_btn_pic' alt='bell' src={bell} />
 					</button>
 
-					{toggle && (
-						<button className='confirm_btn' onClick={() => handleRefresh()}>
-							GIVE THE ALERT
-						</button>
-					)}
-					{toggle && <Signal idSignal={idSignal} />}
-				</div>
-				<img src={map} alt='Ancient Greece' className='map' />
-				<div className='map_fraction'>
-					{mostWanted &&
-						fractionArray.map((element, i) => {
-							if (mostWanted.find((wanted) => wanted.lastseen == i + 1)) {
-								return (
-									<button
-										type='button'
-										id={i + 1}
-										className='fraction fraction_wanted'
-										onClick={() => handleFocus(i)}
-									/>
-								);
-							} else {
-								return (
-									<button
-										type='button'
-										id={i + 1}
-										className='fraction'
-										onClick={() => handleFocus(i)}
-									/>
-								);
-							}
-						})}
-				</div>
-			</div>
-			{idLocation === 0 ? (
-				''
-			) : (
-				<div className='monster_ located_container'>
-					{!toggle &&
-						monsterAtLocation.map((monster) => (
-							<div className='monster_located'>
-								<MonsterCard {...monster} />
-							</div>
-						))}
-				</div>
-			)}
-		</section>
-	);
+          {toggle && (
+            <button className="confirm_btn" onClick={() => handleRefresh()}>
+              GIVE THE ALERT
+            </button>
+          )}
+          {toggle && <Signal idSignal={idSignal} />}
+        </div>
+        <img src={map} alt="Ancient Greece" className="map" />
+        <div className="map_fraction">
+          {mostWanted &&
+            fractionArray.map((element, i) => {
+              if (mostWanted.find((wanted) => +wanted.lastseen === i + 1)) {
+                return (
+                  <button
+                    type="button"
+                    id={i + 1}
+                    className="fraction fraction_wanted"
+                    onClick={() => handleFocus(i)}
+                  />
+                );
+              } else {
+                return (
+                  <button
+                    type="button"
+                    id={i + 1}
+                    className="fraction"
+                    onClick={() => handleFocus(i)}
+                  />
+                );
+              }
+            })}
+        </div>
+      </div>
+      {idLocation === 0 ? (
+        ""
+      ) : (
+        <div className="monster_ located_container">
+          {!toggle &&
+            monsterAtLocation.map((monster) => (
+              <div className="monster_located">
+                <MonsterCard {...monster} />
+              </div>
+            ))}
+        </div>
+      )}
+    </section>
+  );
 };
 
 export default Map;
