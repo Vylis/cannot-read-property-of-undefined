@@ -1,5 +1,9 @@
 .signal_search {
   border-radius: 20px;
+  outline: none;
+  height: 2rem;
+  padding-left: 1rem;
+  border: 1px solid black;
 }
 
 .signal_container {
@@ -10,9 +14,22 @@
 
 .signal_monster_name {
   border: none;
+  width: 100%;
   background-color: hsl(0, 7%, 44%);
   font-size: 1em;
   color: #ffff;
+  margin: 0;
+}
+
+p>.signal_monster_name{
+  margin: 0;
+  height: 2rem;
+  font-weight: bold;
+}
+
+p>.signal_monster_name:hover{
+  background-color: black;
+  color: white;
 }
 
 .signal_monster_name:focus {

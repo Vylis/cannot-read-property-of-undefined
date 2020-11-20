@@ -3,7 +3,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	/* margin-top: 200px; */
+	margin-top: 2rem;
 	bottom: 0;
 	color: var(--white);
 	background: linear-gradient(#ffffff57, var(--dark-background));
