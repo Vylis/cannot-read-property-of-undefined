@@ -1,11 +1,10 @@
-.footer_container{
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
-  bottom: 0px;
-  color: var(--white);
-  background: linear-gradient(#ffffff96, var(--dark-background));
-  margin-top: 4rem;
+.footer_container {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/* margin-top: 200px; */
+	bottom: 0;
+	color: var(--white);
+	background: linear-gradient(#ffffff57, var(--dark-background));
 }

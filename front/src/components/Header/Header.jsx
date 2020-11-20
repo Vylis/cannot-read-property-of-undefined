@@ -4,7 +4,7 @@ import "../../styles/css/Header/Header.css";
 import logo_left from "../../styles/pictures/logo_left.png";
 import logo_right from "../../styles/pictures/logo_right.png";
 
-const title = "MYTHOLODEX";
+const title = "MYTHOLOD";
 
 const Header = () => {
   return (

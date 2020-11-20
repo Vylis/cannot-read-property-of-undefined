@@ -8,6 +8,7 @@ import Footer from './components/Footer/Footer';
 import Admin from './components/Admin/Admin';
 import MonsterList from './components/List/MonsterList';
 import MonsterDetails from './components/List/MonsterDetails';
+import ScrollTopBtn from './components/ScrollTopBtn/ScrollTopBtn';
 
 import './App.css';
 
@@ -15,15 +16,16 @@ function App() {
 	return (
 		<BrowserRouter>
 			<div className='App'>
-				{/* <Header /> */}
+				<Header />
 				<NavBar />
 				<Switch>
 					<Route exact path='/' component={Home} />
 					<Route exact path='/map' component={Map} />
-          <Route exact path='/MonsterList' component={MonsterList} />
-          <Route path='/MonsterList/:id' component={MonsterDetails} />
+					<Route exact path='/MonsterList' component={MonsterList} />
+					<Route path='/MonsterList/:id' component={MonsterDetails} />
 					<Route exact path='/admin' component={Admin} />
 				</Switch>
+				<ScrollTopBtn />
 				<Footer />
 			</div>
 		</BrowserRouter>

@@ -1,0 +1,20 @@
+.signal_search {
+  border-radius: 20px;
+}
+
+.signal_container {
+  background-color: hsl(0, 7%, 44%);
+  opacity: 0.8;
+  border-radius: 20px;
+}
+
+.signal_monster_name {
+  border: none;
+  background-color: hsl(0, 7%, 44%);
+  font-size: 1em;
+  color: #ffff;
+}
+
+.signal_monster_name:focus {
+  background-color: hsl(0, 11%, 28%);
+}
