@@ -5,9 +5,9 @@ import "../../styles/ScrollTopBtn/ScrollTopBtn.css";
 const ScrollTopBtn = () => {
   const [showScroll, setShowScroll] = useState(false);
   const checkScrollTop = () => {
-    if (!showScroll && window.pageYOffset > 400) {
+    if (!showScroll && window.pageYOffset > 300) {
       setShowScroll(true);
-    } else if (showScroll && window.pageYOffset <= 400) {
+    } else if (showScroll && window.pageYOffset <= 300) {
       setShowScroll(false);
     }
   };
@@ -19,7 +19,7 @@ const ScrollTopBtn = () => {
 
   return (
     <>
-      <button type="button" className={`scroll_top_btn ${showScroll ? '' : 'visible'}`} onClick={scrollTop}>
+      <button type="button" className={`scroll_top_btn ${showScroll ? '' : 'invisible'}`} onClick={scrollTop}>
         {" "}
         <span className="arrow">{"<<"}</span>
       </button>

@@ -19,7 +19,6 @@ const Map = () => {
   const [mostWanted, setMostWanted] = useState();
   const [idLocation, setIdLocation] = useState(0);
   const [monsterAtLocation, setMonsterAtLocation] = useState();
-  console.log(idLocation, monsterAtLocation);
 
   useEffect(() => {
     (async () => {
@@ -27,7 +26,7 @@ const Map = () => {
         `${process.env.REACT_APP_MYTH_API_URL}/api/monsters`
       );
       const { data } = monsterLocated;
-      setMonsterAtLocation(data.filter((monster) => monster.id === idLocation));
+      setMonsterAtLocation(data.filter((monster) => +(monster.lastseen) === idLocation));
     })();
   }, [idLocation]);
 
