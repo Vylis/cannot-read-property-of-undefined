@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-import MonsterCard from '../List/MonsterCard'
+import MonsterCard from "../List/MonsterCard";
 
 import "../../styles/css/Home/Home.css";
 
@@ -15,32 +15,23 @@ const Home = () => {
       .then((response) =>
         setMostWanted(response.data.filter((monster) => monster.wanted === 1))
       );
-    axios.get(`https://cannotread.herokuapp.com/api/monsters?wanted=1`)
-    .then((response) => setLastReward(response.data));
+    axios
+      .get(`https://cannotread.herokuapp.com/api/monsters?wanted=1`)
+      .then((response) => setLastReward(response.data));
   }, []);
   return (
     <section className="home_container">
       <h2>Most wanted monsters :</h2>
       <div className="most_wanted_container">
         {mostWanted.map((monster) => (
-          <MonsterCard 
-          id={monster.id}
-          name={monster.name}
-          danger={monster.danger}
-          image={monster.image}
-          />
+          <MonsterCard {...monster} />
         ))}
       </div>
-        <h2>Last rewards :</h2>
-        <div className="last_reward_container">
+      <h2>Last rewards :</h2>
+      <div className="last_reward_container">
         {lastReward.map((monster) => (
-          <MonsterCard 
-          id={monster.id}
-          name={monster.name}
-          danger={monster.danger}
-          image={monster.image}
-          />
-          ))}
+          <MonsterCard {...monster} />
+        ))}
       </div>
     </section>
   );
