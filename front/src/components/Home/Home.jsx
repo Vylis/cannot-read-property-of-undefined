@@ -29,9 +29,9 @@ const Home = () => {
 				<marquee className='home_marquee'>
 					{lastReward.map((monster) => (
 						<span className='home_marquee_monster_name'>
-							<strong>GREEK NEWS !</strong> Recently seen:
+							<strong>GREEK NEWS !</strong> Recently seen: 
 							<strong>{monster.name.toUpperCase()}</strong> near
-							<strong>{monster.location}</strong>, local authorities asked for
+							<strong> {monster.location}</strong>, local authorities asked for
 							people to <strong>stay at home</strong> !
 						</span>
 					))}
