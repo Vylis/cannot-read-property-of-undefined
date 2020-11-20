@@ -1,20 +1,34 @@
-.most_wanted_container, .last_reward_container{
+.home_marquee {
+  display: flex;
+  background-color:  hsl(0, 11%, 28%);
+  height: 5vh;
+  align-items: center;
+}
+
+.home_marquee_monster_name {
+  margin-right: 400px;
+  color: #ffff;
+  font-size: 1.5rem;
+}
+
+.most_wanted_container,
+.last_reward_container {
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
 }
 
-.monster_info{
+.monster_info {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
 
-.wanted_monster{
+.wanted_monster {
   margin: 1rem;
 }
 
-.monster_portrait{
+.monster_portrait {
   height: 10rem;
 }
