@@ -21,8 +21,8 @@ function App() {
 				<Switch>
 					<Route exact path='/' component={Home} />
 					<Route exact path='/map' component={Map} />
-          <Route exact path='/MonsterList' component={MonsterList} />
-          <Route path='/MonsterList/:id' component={MonsterDetails} />
+					<Route exact path='/MonsterList' component={MonsterList} />
+					<Route path='/MonsterList/:id' component={MonsterDetails} />
 					<Route exact path='/admin' component={Admin} />
 				</Switch>
 				<ScrollTopBtn />
