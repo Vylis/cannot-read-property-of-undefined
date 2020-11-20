@@ -40,6 +40,7 @@ export default function Signal(props) {
       <div className="signal_input_container">
         <label htmlFor="search">
           <input
+            className="signal_search"
             id="search"
             value={search}
             onChange={(e) => setSearch(e.target.value)}

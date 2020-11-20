@@ -22,6 +22,7 @@ const Map = () => {
   const [refresh, setRefresh] = useState(false);
   const [idLocation, setIdLocation] = useState(0);
   const [monsterAtLocation, setMonsterAtLocation] = useState();
+  const [toggle, setToggle] = useState(false);
   console.log(idLocation, monsterAtLocation);
 
   useEffect(() => {
@@ -48,8 +49,16 @@ const Map = () => {
   return (
     <section className=" map_page_container">
       <h3>Click on the map to see which monsters are in that location :</h3>
-      <Signal idSignal={idSignal} />
-      <button onClick={() => handleRefresh()}>OK</button>
+
+      <label className="alert_button">
+        {" "}
+        <button onClick={() => setToggle(!toggle)}>
+          ALERT
+        </button>
+      </label>
+      {toggle && <Signal idSignal={idSignal} />}
+      {toggle && <button onClick={() => handleRefresh()}>OK</button>}
+
       <div className="map_container">
         <img src={map} alt="Ancient Greece" className="map" />
         <div className="map_fraction">
@@ -81,12 +90,13 @@ const Map = () => {
         ""
       ) : (
         <div className="monster_ located_container">
-          {monsterAtLocation.map((monster) => (
-            <div className="monster_located">
-              <MonsterCard {...monster} />
-              <p>{monster.description}</p>
-            </div>
-          ))}
+          {!toggle &&
+            monsterAtLocation.map((monster) => (
+              <div className="monster_located">
+                <MonsterCard {...monster} />
+                <p>{monster.description}</p>
+              </div>
+            ))}
         </div>
       )}
     </section>
