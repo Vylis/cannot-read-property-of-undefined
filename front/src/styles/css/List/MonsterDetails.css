@@ -4,15 +4,19 @@
 	box-shadow: 5px 5px 10px 5px black;
 }
 
-.monster_details_button {
-	margin: 2rem 0;
-}
-
 .lootDetailsDiv {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
 	border-top: 1px solid black;
-	border-bottom: 1px solid black;
+}
+
+.details_title{
+	font-weight: bold;
+}
+
+.details_content{
+	font-size: 1.2rem;
+	font-weight: bold;
 }
