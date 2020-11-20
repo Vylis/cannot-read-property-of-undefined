@@ -7,7 +7,6 @@ function MonsterList() {
 	const [monsters, setMonsters] = useState([]);
 	const [showMonsters, setShowMonsters] = useState(monsters);
 	const [refresh, setRefresh] = useState(false);
-	const [initialMonsterList, setInitialMonsterList] = useState(monsters);
 
 	useEffect(() => {
 		(async () => {
@@ -49,7 +48,7 @@ function MonsterList() {
 	return (
 		<div className='monster_list_container'>
 			<div className='monster_list_select_container'>
-				<select className='monster_list_select' onClick={handleChange}>
+				<select className='monster_list_select' onChange={handleChange}>
 					<option value='all'>All monsters</option>
 					<option value='danger_asc'>Order by danger level (ascending)</option>
 					<option value='danger_desc'>
