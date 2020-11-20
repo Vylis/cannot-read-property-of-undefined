@@ -45,8 +45,11 @@ const Map = () => {
   const handleFocus = (i) => {
     setIdSignal(i + 1);
     setIdLocation(i + 1);
-    window.scrollTo({ top: 1000, behavior: "smooth" });
   };
+
+const handleScroll = () => {
+  window.scrollTo({ top: 1000, behavior: "smooth" });
+}
 
   return (
     <section className=" map_page_container">
@@ -111,6 +114,7 @@ const Map = () => {
                 </h3>
                 <div className="monster_located">
                   <MonsterCard {...monster} />
+                  {handleScroll()}
                 </div>
               </>
             ))}
