@@ -11,12 +11,12 @@ const Home = () => {
 
 	useEffect(() => {
 		axios
-			.get(`https://cannotread.herokuapp.com/api/monsters?wanted=1`)
+			.get(`${process.env.REACT_APP_MYTH_API_URL}/api/monsters?wanted=1`)
 			.then((response) =>
 				setMostWanted(response.data.filter((monster) => monster.danger >= 10))
 			);
 		axios
-			.get(`https://cannotread.herokuapp.com/api/monsters?wanted=1`)
+			.get(`${process.env.REACT_APP_MYTH_API_URL}/api/monsters?wanted=1`)
 			.then((response) =>
 				setLastReward(
 					response.data.slice(Math.max(response.data.length - 5, 0))
