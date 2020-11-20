@@ -27,11 +27,13 @@ const Map = () => {
 
   useEffect(() => {
     (async () => {
-      const monsterLocated = await axios.get(
+      const monsters = await axios.get(
         `${process.env.REACT_APP_MYTH_API_URL}/api/monsters`
       );
-      const { data } = monsterLocated;
-      setMonsterAtLocation(data.filter((monster) => monster.id === idLocation));
+      const { data } = monsters;
+      setMonsterAtLocation(
+        data.filter((monster) => +monster.lastseen === idLocation)
+      );
       const wanted = data.filter((monster) => monster.wanted === 1);
       setMostWanted(wanted);
     })();
@@ -49,15 +51,14 @@ const Map = () => {
   return (
     <section className=" map_page_container">
       <div className="map_title_container">
-      {toggle ? (
-        <h3>
-          If you saw a monster recently, please select its last position on the
-          map and identify him by selecting its name:
-        </h3>
-      ): (
-        <h3>Click on the map to see which monsters are in that location :</h3>
-      )}
-      
+        {toggle ? (
+          <h3>
+            If you saw a monster recently, please select its last position on
+            the map and identify him by selecting its name:
+          </h3>
+        ) : (
+          <h3>Click on the map to see which monsters are in that location :</h3>
+        )}
       </div>
       <div className="map_container">
         <div className="alert_container">
@@ -119,4 +120,3 @@ const Map = () => {
 };
 
 export default Map;
-
