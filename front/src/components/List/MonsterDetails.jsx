@@ -38,13 +38,17 @@ const MonsterDetails = ({ match }) => {
             {monster.weakness}
 						</span>
           </p>
+		  <p className="details_content">{monster.height} m {monster.weight} kg</p>
+		  <p className="details_title">
+			  Wanted ? <span className="details_content">{monster.wanted ? "Yes" : "No"}</span>
+		  </p>
+		  <p className="details_title">
+			  Alive ? <span className="details_content">{monster.alive ? "Yes" : "No"}</span>
+		  </p>
         </div>
 
         <LootsDetails value={monster.id_loot} />
       </div>
-      <Link to={"/MonsterList"}>
-        <button className="monster_details_button">Return to List</button>
-      </Link>
     </div>
   );
 };
