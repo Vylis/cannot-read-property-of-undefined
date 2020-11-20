@@ -1,11 +1,10 @@
 .footer_container{
   width: 100%;
-  display: none;
+  display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
-  bottom: 0px;
+  /* margin-top: 200px; */
+  bottom: 0;
   color: var(--white);
   background: linear-gradient(#ffffff96, var(--dark-background));
-  margin-top: 4rem;
 }

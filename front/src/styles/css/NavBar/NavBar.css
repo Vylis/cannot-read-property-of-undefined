@@ -4,6 +4,11 @@
   align-items: center;
   background: linear-gradient(350deg, var(--dark-tone), var(--dark-background));
   padding: 20px 0;
+  margin-top: 0;
+}
+
+.invisible{
+  margin-top: -5rem;
 }
 
 .nav_btn{
