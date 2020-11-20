@@ -39,6 +39,9 @@ function MonsterList() {
     if (e.target.value === "danger_desc") {
       setShowMonsters(monsters.sort((acc, curr) => curr.danger - acc.danger));
     }
+    if (e.target.value === "location") {
+      setShowMonsters(monsters.sort((acc, curr) => acc.location.localeCompare(curr.location)));
+    }
   };
 
   return (
@@ -49,6 +52,9 @@ function MonsterList() {
           <option value="danger_asc">Order by danger level (ascending)</option>
           <option value="danger_desc">
             Order by danger level (descending)
+          </option>
+          <option value="location">
+            Order by origin location
           </option>
         </select>
       </div>
