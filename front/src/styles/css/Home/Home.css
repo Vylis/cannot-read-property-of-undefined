@@ -1,9 +1,16 @@
 .most_wanted_container, .last_reward_container{
   display: flex;
+  margin: auto;
+  width: 80%;
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
 }
+
+/* .last_reward_container{
+  width: 80%;
+  align-items: flex-start;
+} */
 
 .monster_info{
   display: flex;

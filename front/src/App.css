@@ -7,8 +7,8 @@
 	--dark-tone: #6a573e;
 	min-height: 100vh;
 	background-image: url('./styles/pictures/back.jpg');
-	background-size: cover;
-	animation: backgroundMove 150s ease infinite;
+	/* background-size: cover; */
+	animation : backgroundMove 300s ease infinite;
 }
 
 @keyframes backgroundMove {

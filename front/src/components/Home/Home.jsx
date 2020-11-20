@@ -19,7 +19,7 @@ const Home = () => {
 			.get(`https://cannotread.herokuapp.com/api/monsters?wanted=1`)
 			.then((response) =>
 				setLastReward(
-					response.data.slice(Math.max(response.data.length - 5, 0))
+					response.data.slice(Math.max(response.data.length - 6, 0))
 				)
 			);
 	}, []);

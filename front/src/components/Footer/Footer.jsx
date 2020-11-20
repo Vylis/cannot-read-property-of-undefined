@@ -5,7 +5,7 @@ import "../../styles/css/Footer/Footer.css";
 const Footer = () => {
   return (
     <div className="footer_container">
-      <p>© Copyright 2020 - Developed by CRPOU</p>
+      <p>© Copyright <strong>2020</strong> - Developed by <strong>CRPOU</strong></p>
     </div>
   );
 };

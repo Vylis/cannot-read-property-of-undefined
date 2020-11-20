@@ -8,6 +8,10 @@
 
 .monster_list_select {
   border: none;
+  outline: none;
+  height: 2rem;
+  padding: 0 1rem;
+  margin : 1rem 0 0 0;
   background-color: hsl(0, 7%, 44%);
   font-size: 1em;
   color: #ffff;
