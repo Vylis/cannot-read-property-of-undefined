@@ -9,7 +9,7 @@ const LootsDetails = (props) => {
 	useEffect(() => {
 		value &&
 			axios
-				.get(`http://localhost:3000/api/loots/${value}`)
+				.get(`${process.env.REACT_APP_MYTH_API_URL}/api/loots/${value}`)
 				.then((response) => setLoot(response.data[0]));
 	}, [value]);
 
