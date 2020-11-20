@@ -1,76 +1,73 @@
-.map_page_container {
-}
-
 .map_title_container {
-  margin-bottom: 50px;;
+	margin-bottom: 50px;
 }
 
 .alert_container {
-  transition: 1s;
-  position: absolute;
-  right: 0;
-  top: -2.5rem;
-  display: flex;
-  align-items: baseline;
-  flex-direction: row-reverse;
-  z-index: 3;
+	transition: 1s;
+	position: absolute;
+	right: 0;
+	top: -2.5rem;
+	display: flex;
+	align-items: baseline;
+	flex-direction: row-reverse;
+	z-index: 3;
 }
 
 .alert_btn_pic {
-  width: 30px;
+	width: 30px;
 }
 
 .confirm_btn {
-  border: none;
-  background-color: red;
-  border-radius: 20px;
-  color: #ffff;
+	border: none;
+	background-color: red;
+	border-radius: 20px;
+	color: #ffff;
 }
 
 .map_container {
-  position: relative;
-  max-width: 80rem;
-  min-width: 320px;
-  margin: auto;
-  height: 100vh;
+	position: relative;
+	max-width: 80rem;
+	min-width: 320px;
+	margin: auto;
+	height: 100vh;
 }
 
 .map {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 100%;
-  z-index: 1;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: 100%;
+	z-index: 1;
 }
 
 .map_fraction {
-  position: absolute;
-  display: grid;
-  grid-template-columns: repeat(15, 1fr);
-  grid-template-rows: repeat(15, 1fr);
-  width: 100%;
-  height: 100%;
-  z-index: 2;
-  background-color: transparent;
+	position: absolute;
+	display: grid;
+	grid-template-columns: repeat(15, 1fr);
+	grid-template-rows: repeat(15, 1fr);
+	width: 100%;
+	height: 100%;
+	z-index: 2;
+	background-color: transparent;
 }
 
 .fraction {
-  display: grid;
-  background: none;
-  border: none;
-  width: 100%;
-  z-index: 1;
-  box-shadow: inset 0 0 1px 1px grey;
+	display: grid;
+	background: none;
+	border: none;
+	width: 100%;
+	z-index: 1;
+	box-shadow: inset 0 0 1px 1px grey;
 }
 
 .fraction:focus {
-  box-shadow: inset 0 0 1px 2px red;
+	box-shadow: inset 0 0 1px 2px red;
 }
 
 .fraction_wanted {
-  background: none;
-  box-shadow: inset 0 0 10px 10px yellow;
+	background: none;
+	box-shadow: inset 0 0 10px 10px yellow;
 }
 /* 
 .monster_located_container{
@@ -82,9 +79,9 @@
 } */
 
 .monster_located {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  margin: 1rem;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	margin: 1rem;
 }
