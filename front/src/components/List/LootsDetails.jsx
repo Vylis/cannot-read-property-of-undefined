@@ -16,8 +16,11 @@ const LootsDetails = (props) => {
 	return (
 		<div>
 			<div className='lootDetails'>
-				<h2>{loot.name}</h2>
-				<p>{loot.description}</p>
+				<div className='lootDetailsDiv'>
+					<h2 className='lootText'> Loots of this creature </h2>
+					<h4>{loot.name}</h4>
+					<p>{loot.description}</p>
+				</div>
 			</div>
 		</div>
 	);

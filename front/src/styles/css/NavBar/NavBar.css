@@ -1,37 +1,37 @@
-.nav_container{
-  display: flex; 
-  justify-content: space-around;
-  align-items: center;
-  background: linear-gradient(350deg, var(--dark-tone), var(--dark-background));
-  padding: 20px 0;
-  margin-top: 0;
+.nav_container {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	background: linear-gradient(#ffffff57, var(--dark-background));
+	padding: 20px 0;
+	margin-top: 0;
 }
 
-.invisible{
-  margin-top: -5rem;
+.invisible {
+	margin-top: -5rem;
 }
 
-.nav_btn{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width : 4rem;
-  height: 2rem;
-  text-decoration: none;
-  border : 2px solid hsl(308, 100%, 50%);
-  border-radius: 15px;
-  color: black;
-  background-color: hsl(327, 100%, 88%);
-  transition: .2s;
+.nav_btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 4rem;
+	height: 2rem;
+	text-decoration: none;
+	border: 2px solid hsl(0, 0%, 100%);
+	border-radius: 15px;
+	color: white;
+	background-color: hsl(0, 7%, 44%);
+	transition: 0.2s;
 }
 
-.nav_btn.selected{
-  background-color: var(--dark-background);
-  color:var(--white);
-  box-shadow: 0px 0px 10px hsl(308, 100%, 50%);
+.nav_btn.selected {
+	background-color: hsl(0, 11%, 28%);
+	color: var(--white);
+	box-shadow: 0px 0px 10px hsl(0, 0%, 100%);
 }
 
-.nav_btn:hover{
-  transform: scale(1.1);
-  box-shadow: 0px 0px 10px hsl(323, 100%, 72%);
+.nav_btn:hover {
+	transform: scale(1.1);
+	box-shadow: 0px 0px 10px hsl(0, 0%, 100%);
 }
