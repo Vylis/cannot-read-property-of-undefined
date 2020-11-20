@@ -2,8 +2,9 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import '../../styles/css/List/MonsterDetails.css';
+import LootsDetails from './LootsDetails';
 
-const MonsterDetails = ({ match, location }) => {
+const MonsterDetails = ({ match }) => {
 	const { id } = match.params;
 	const [monster, setMonster] = useState({});
 
@@ -31,6 +32,8 @@ const MonsterDetails = ({ match, location }) => {
 					<p>{monster.description}</p>
 					<p>Weakness : {monster.weakness}</p>
 				</div>
+
+				<LootsDetails value={monster.id_loot} />
 			</div>
 		</div>
 	);
