@@ -78,7 +78,7 @@ const Map = () => {
         <div className="map_fraction">
           {mostWanted &&
             fractionArray.map((element, i) => {
-              if (mostWanted.find((wanted) => wanted.lastseen == i + 1)) {
+              if (mostWanted.find((wanted) => +wanted.lastseen === i + 1)) {
                 return (
                   <button
                     type="button"
