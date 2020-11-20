@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
+import Signal from "./Signal";
 import MonsterCard from "../List/MonsterCard";
 
 import map from "../../styles/pictures/greece_map.png";
@@ -17,18 +18,12 @@ const noMonsterAlert = "No monster in this area !";
 
 const Map = () => {
   const [mostWanted, setMostWanted] = useState();
+  const [idSignal, setIdSignal] = useState();
+  const [refresh, setRefresh] = useState(false);
   const [idLocation, setIdLocation] = useState(0);
   const [monsterAtLocation, setMonsterAtLocation] = useState();
-
-  useEffect(() => {
-    (async () => {
-      const monsterLocated = await axios.get(
-        `${process.env.REACT_APP_MYTH_API_URL}/api/monsters`
-      );
-      const { data } = monsterLocated;
-      setMonsterAtLocation(data.filter((monster) => +(monster.lastseen) === idLocation));
-    })();
-  }, [idLocation]);
+  const [toggle, setToggle] = useState(false);
+  console.log(idLocation, monsterAtLocation);
 
   useEffect(() => {
     (async () => {
@@ -36,19 +31,51 @@ const Map = () => {
         `${process.env.REACT_APP_MYTH_API_URL}/api/monsters`
       );
       const { data } = monsters;
+      setMonsterAtLocation(
+        data.filter((monster) => +monster.lastseen === idLocation)
+      );
       const wanted = data.filter((monster) => monster.wanted === 1);
       setMostWanted(wanted);
     })();
-  }, []);
+  }, [idLocation, refresh]);
+
+  const handleRefresh = () => {
+    setRefresh(!refresh);
+  };
 
   const handleFocus = (i) => {
+    setIdSignal(i + 1);
     setIdLocation(i + 1);
   };
 
   return (
     <section className=" map_page_container">
-      <h3>Click on the map to see which monsters are in that location :</h3>
+      <div className="map_title_container">
+        {toggle ? (
+          <h3>
+            If you saw a monster recently, please select its last position on
+            the map and identify him by selecting its name:
+          </h3>
+        ) : (
+          <h3>Click on the map to see which monsters are in that location :</h3>
+        )}
+      </div>
       <div className="map_container">
+        <div className="alert_container">
+          <button className="alert_btn" onClick={() => setToggle(!toggle)}>
+            <img
+              className="alert_btn_pic"
+              src="https://www.iconsdb.com/icons/preview/red/bell-xxl.png"
+            />
+          </button>
+
+          {toggle && (
+            <button className="confirm_btn" onClick={() => handleRefresh()}>
+              GIVE THE ALERT
+            </button>
+          )}
+          {toggle && <Signal idSignal={idSignal} />}
+        </div>
         <img src={map} alt="Ancient Greece" className="map" />
         <div className="map_fraction">
           {mostWanted &&
@@ -79,12 +106,13 @@ const Map = () => {
         ""
       ) : (
         <div className="monster_ located_container">
-          {monsterAtLocation.map((monster) => (
-            <div className="monster_located">
-              <MonsterCard {...monster} />
-              <p>{monster.description}</p>
-            </div>
-          ))}
+          {!toggle &&
+            monsterAtLocation.map((monster) => (
+              <div className="monster_located">
+                <MonsterCard {...monster} />
+                <p>{monster.description}</p>
+              </div>
+            ))}
         </div>
       )}
     </section>
