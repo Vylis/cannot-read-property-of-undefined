@@ -8,6 +8,7 @@ import Footer from './components/Footer/Footer';
 import Admin from './components/Admin/Admin';
 import MonsterList from './components/List/MonsterList';
 import MonsterDetails from './components/List/MonsterDetails';
+import ScrollTopBtn from './components/ScrollTopBtn/ScrollTopBtn';
 
 import './App.css';
 
@@ -24,6 +25,7 @@ function App() {
           <Route path='/MonsterList/:id' component={MonsterDetails} />
 					<Route exact path='/admin' component={Admin} />
 				</Switch>
+				<ScrollTopBtn />
 				<Footer />
 			</div>
 		</BrowserRouter>

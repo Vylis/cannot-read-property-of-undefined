@@ -1,0 +1,14 @@
+.scroll_top_btn{
+  position: fixed;
+  display: block;
+  bottom : 3rem;
+  right : 1rem;
+  padding: 2rem;
+  border:none;
+  outline: none;
+  border-radius: 50%;
+}
+
+.visible{
+  display: none;
+}

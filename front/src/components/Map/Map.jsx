@@ -3,6 +3,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 
 import Signal from "./Signal";
+import MonsterCard from "../List/MonsterCard";
 
 import map from "../../styles/pictures/greece_map.png";
 import "../../styles/css/Map/Map.css";
@@ -13,21 +14,27 @@ for (let i = 0; i < nbFraction; i++) {
   fractionArray.push("");
 }
 
+const noMonsterAlert = "No monster in this area !";
+
 const Map = () => {
   const [mostWanted, setMostWanted] = useState();
   const [idSignal, setIdSignal] = useState();
   const [refresh, setRefresh] = useState(false);
+  const [idLocation, setIdLocation] = useState(0);
+  const [monsterAtLocation, setMonsterAtLocation] = useState();
+  console.log(idLocation, monsterAtLocation);
 
   useEffect(() => {
     (async () => {
-      const monsters = await axios.get(
+      const monsterLocated = await axios.get(
         `${process.env.REACT_APP_MYTH_API_URL}/api/monsters`
       );
-      const { data } = monsters;
+      const { data } = monsterLocated;
+      setMonsterAtLocation(data.filter((monster) => monster.id === idLocation));
       const wanted = data.filter((monster) => monster.wanted === 1);
       setMostWanted(wanted);
     })();
-  }, [refresh]);
+  }, [idLocation, refresh]);
 
   const handleRefresh = () => {
     setRefresh(!refresh);
@@ -35,6 +42,7 @@ const Map = () => {
 
   const handleFocus = (i) => {
     setIdSignal(i + 1);
+    setIdLocation(i + 1);
   };
 
   return (
@@ -51,9 +59,8 @@ const Map = () => {
                 return (
                   <button
                     type="button"
-                    // to="/list"
                     id={i + 1}
-                    className="fraction_wanted"
+                    className="fraction fraction_wanted"
                     onClick={() => handleFocus(i)}
                   />
                 );
@@ -61,7 +68,6 @@ const Map = () => {
                 return (
                   <button
                     type="button"
-                    // to="/list"
                     id={i + 1}
                     className="fraction"
                     onClick={() => handleFocus(i)}
@@ -71,6 +77,18 @@ const Map = () => {
             })}
         </div>
       </div>
+      {idLocation === 0 ? (
+        ""
+      ) : (
+        <div className="monster_ located_container">
+          {monsterAtLocation.map((monster) => (
+            <div className="monster_located">
+              <MonsterCard {...monster} />
+              <p>{monster.description}</p>
+            </div>
+          ))}
+        </div>
+      )}
     </section>
   );
 };
