@@ -1,38 +1,47 @@
+@font-face{
+	font-family: 'greek';
+	src: url('../../fonts/DalekPinpointBold.ttf');
+}
+
 .header {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .logo {
-	width: 3rem;
+  width: 3rem;
 }
 
 .logo_right {
-	transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 .site_title {
-	margin: 0;
-	font-size: 3rem;
-	padding: 1rem;
+  margin: 0;
+  font-size: 3rem;
+  padding: 1rem;
 	font-family: greek;
+	text-shadow: 1px 1px 10px white;
 }
 
 @media screen and (max-width: 480px) {
-	.site_title {
-		font-size: 2.5rem;
-	}
+  .site_title {
+    font-size: 2.5rem;
+  }
+  .logo {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 320px) {
-	.site_title {
-		font-size: 2rem;
-	}
+  .site_title {
+    font-size: 2rem;
+  }
 }
 
 @media screen and (max-width: 280px) {
-	.site_title {
-		font-size: 1.5rem;
-	}
+  .site_title {
+    font-size: 2rem;
+  }
 }

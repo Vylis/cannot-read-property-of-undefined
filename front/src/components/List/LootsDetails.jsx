@@ -9,7 +9,7 @@ const LootsDetails = (props) => {
 	useEffect(() => {
 		value &&
 			axios
-				.get(`http://localhost:3000/api/loots/${value}`)
+				.get(`${process.env.REACT_APP_MYTH_API_URL}/api/loots/${value}`)
 				.then((response) => setLoot(response.data[0]));
 	}, [value]);
 
@@ -17,7 +17,7 @@ const LootsDetails = (props) => {
 		<div>
 			<div className='lootDetails'>
 				<div className='lootDetailsDiv'>
-					<h2 className='lootText'> Loots of this creature </h2>
+					<h2 className='lootText'> Treasure </h2>
 					<h4>{loot.name}</h4>
 					<p>{loot.description}</p>
 				</div>

@@ -1,3 +1,9 @@
+@font-face{
+	font-family: 'greek';
+	src: url('../../fonts/DalekPinpointBold.ttf');
+}
+
+
 .nav_container {
 	display: flex;
 	justify-content: space-around;
@@ -13,16 +19,19 @@
 
 .nav_btn {
 	display: flex;
+	font-family: greek;
 	justify-content: center;
 	align-items: center;
-	width: 4rem;
-	height: 2rem;
+	width: 10rem;
+	height: 2.5rem;
 	text-decoration: none;
 	border: 2px solid hsl(0, 0%, 100%);
 	border-radius: 15px;
 	color: white;
+	font-weight: bold;
 	background-color: hsl(0, 7%, 44%);
-	transition: 0.2s;
+  transition: 0.2s;
+  font-size: 1.5rem;
 }
 
 .nav_btn.selected {
