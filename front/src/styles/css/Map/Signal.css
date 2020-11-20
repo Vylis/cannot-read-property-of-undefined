@@ -1,0 +1,14 @@
+.signal_container {
+  background-color: hsl(308, 100%, 50%);
+  opacity: 0.8;
+}
+
+.signal_monster_name {
+  border: none;
+  background-color: hsl(308, 100%, 50%);
+  font-size: 1em;
+}
+
+.signal_monster_name:focus {
+  background-color: hsl(323, 100%, 72%);
+}

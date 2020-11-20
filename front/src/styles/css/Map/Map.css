@@ -1,5 +1,28 @@
 .map_page_container {
- 
+}
+
+.map_title_container {
+  margin-bottom: 50px;;
+}
+
+.alert_container {
+  transition: 1s;
+  position: absolute;
+  right: 0;
+  top: -2.5rem;
+  display: flex;
+  align-items: baseline;
+  flex-direction: row-reverse;
+  z-index: 3;
+}
+
+.alert_btn_pic {
+  width: 30px;
+}
+
+.confirm_btn {
+  border: none;
+  background-color: violet;
 }
 
 .map_container {
@@ -56,7 +79,7 @@
   margin: 1rem;
 } */
 
-.monster_located{
+.monster_located {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;

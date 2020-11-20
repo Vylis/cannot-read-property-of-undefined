@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Axios from "axios";
 
+import '../../styles/css/Map/Signal.css'
+
 export default function Signal(props) {
   const { idSignal } = props;
   const [search, setSearch] = useState("");
@@ -44,19 +46,20 @@ export default function Signal(props) {
             id="search"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
+            autoComplete="off"
           />
         </label>
       </div>
       <div className="signal_list_container">
         {monsters &&
           monsters.map((monster) => (
-            <button
+            <p><button
               className="signal_monster_name"
               value={monster.name}
               onClick={handleChange}
             >
               {monster.name}
-            </button>
+            </button></p>
           ))}
       </div>
     </div>

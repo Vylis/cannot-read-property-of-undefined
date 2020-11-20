@@ -48,18 +48,33 @@ const Map = () => {
 
   return (
     <section className=" map_page_container">
-      <h3>Click on the map to see which monsters are in that location :</h3>
-
-      <label className="alert_button">
-        {" "}
-        <button onClick={() => setToggle(!toggle)}>
-          ALERT
-        </button>
-      </label>
-      {toggle && <Signal idSignal={idSignal} />}
-      {toggle && <button onClick={() => handleRefresh()}>OK</button>}
-
+      <div className="map_title_container">
+      {toggle ? (
+        <h3>
+          If you saw a monster recently, please select its last position on the
+          map and identify him by selecting its name:
+        </h3>
+      ): (
+        <h3>Click on the map to see which monsters are in that location :</h3>
+      )}
+      
+      </div>
       <div className="map_container">
+        <div className="alert_container">
+          <button className="alert_btn" onClick={() => setToggle(!toggle)}>
+            <img
+              className="alert_btn_pic"
+              src="https://www.iconsdb.com/icons/preview/red/bell-xxl.png"
+            />
+          </button>
+
+          {toggle && (
+            <button className="confirm_btn" onClick={() => handleRefresh()}>
+              GIVE THE ALERT
+            </button>
+          )}
+          {toggle && <Signal idSignal={idSignal} />}
+        </div>
         <img src={map} alt="Ancient Greece" className="map" />
         <div className="map_fraction">
           {mostWanted &&
@@ -104,3 +119,4 @@ const Map = () => {
 };
 
 export default Map;
+
